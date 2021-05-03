@@ -279,7 +279,7 @@ def job():
         sendTelegramNotification(vd['name'], vd['pincode'], ses['date'])
 
 def sendTelegramNotification(name, pincode, vcdate):
-  bot_token = '1541508197:AAG43nuA9keUw7tDoQh74DSm8_LS06YA4uA'
+  bot_token = ''
   bot_chatID =extract_chat_id()
 
   send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + str(bot_chatID) + '&parse_mode=Markdown&text=' + "I am bot!!"
@@ -287,7 +287,7 @@ def sendTelegramNotification(name, pincode, vcdate):
   response = requests.get(send_text)
 
 def extract_chat_id():
-  bot_token = 'bot1541508197:AAG43nuA9keUw7tDoQh74DSm8_LS06YA4uA'
+  bot_token = ''
   message_url = 'https://api.telegram.org/'+ bot_token +'/getUpdates'
   print (message_url)
   message_response = requests.get(message_url)
